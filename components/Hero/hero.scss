@@ -1,0 +1,11 @@
+.hero {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background: #be5869;
+  //background: radial-gradient(ellipse at center, #c31432 0%, #240b36 100%);
+  //background: radial-gradient(ellipse at center, #F27121 0%, #E94057 44%, #8A2387 100%);
+  //background: radial-gradient(ellipse at center, #302b63 0%, #0f0c29 100%);
+  //background: radial-gradient(ellipse at center, #B2FEFA 0%, #0ED2F7 100%);
+  background: radial-gradient(ellipse at center, #c800a7 0%, #2a2a78 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a90329', endColorstr='#6d0019', GradientType=1);
+}
