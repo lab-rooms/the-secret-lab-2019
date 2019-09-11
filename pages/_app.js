@@ -1,37 +1,68 @@
 import React from 'react';
 import App, { Container } from 'next/app'
+import { PageTransition } from 'next-page-transitions';
+import { TweenMax, Back, Elastic } from 'gsap';
 import withRedux from 'next-redux-wrapper';
 import { Provider } from 'react-redux';
 import './base.scss';
 import Store from '../redux/store';
+import Particles from '../utils/particles';
 
 @withRedux((initialState) => Store.getOrCreateStore(initialState), {
-	debug: false,
+  debug: false,
 })
 class MyApp extends App {
-	static async getInitialProps({ Component, ctx }) {
-		let pageProps = {};
+  constructor(props) {
+    super(props);
+    this.canvas = React.createRef();
+    this.from = props.pageProps.to;
+    this.before = props.pageProps.before;
+  }
 
-		if (Component.getInitialProps) {
-			pageProps = await Component.getInitialProps(ctx)
-		}
+  static async getInitialProps({ Component, router, ctx }) {
+    let pageProps = {};
 
-		return { pageProps }
-	}
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx)
+    }
 
-	render () {
-		const {
-			Component, pageProps, store,
-		} = this.props;
+    return { pageProps, router }
+  }
 
-		return (
-			<Container>
-				<Provider store={store}>
-					<Component {...pageProps} />
-				</Provider>
-			</Container>
-		)
-	}
+  initializeParticleEngine(canvas) {
+    if (this.isCanvasActive) return;
+    new Particles(canvas);
+    this.isCanvasActive = true;
+  }
+
+  animateBackground() {
+    const { pageProps } = this.props;
+    TweenMax.fromTo('.main--ingradient', 1, this.before, {...pageProps.before, ease: Back.easeInOut.config(1)});
+    TweenMax.fromTo('.main', 1.4, this.from, {...pageProps.to, ease: Back.easeInOut.config(1)});
+
+    this.from = pageProps.to;
+    this.before = pageProps.before;
+  }
+
+  render() {
+    const {
+      Component, pageProps, store, router,
+    } = this.props;
+    console.log({pageProps});
+    return (
+      <Container>
+        <Provider store={store}>
+          <div ref={() => this.animateBackground()} className={`${pageProps.page} main main--intro`}>
+            <div className="main--ingradient"/>
+            <canvas ref={canvas => this.initializeParticleEngine(canvas)} />
+            <PageTransition timeout={1000} classNames={'page-transition'}>
+              <Component {...pageProps} key={router.route} />
+            </PageTransition>
+          </div>
+        </Provider>
+      </Container>
+    )
+  }
 }
 
 export default MyApp;

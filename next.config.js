@@ -13,6 +13,9 @@ module.exports = withSass({
       '/': { page: '/' },
       '/en': { page: '/', query: { 'lang': 'en' } },
       '/nl': { page: '/', query: { 'lang': 'nl' } },
+      '/about': { page: '/about' },
+      '/en/about': { page: '/about', query: { 'lang': 'en' } },
+      '/nl/about': { page: '/about', query: { 'lang': 'nl' } },
     };
 
     return routes;

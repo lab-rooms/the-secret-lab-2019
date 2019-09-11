@@ -1,8 +1,5 @@
 import { combineReducers } from 'redux';
-import kentico from './kentico/reducers';
 
-const reducers = combineReducers({
-  kentico,
-});
+const reducers = combineReducers({});
 
 export default reducers;

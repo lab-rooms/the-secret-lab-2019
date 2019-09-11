@@ -12,6 +12,14 @@ class HomePage extends React.Component {
     const language = query.lang || 'en';
     return {
       language,
+      page: 'home',
+      to: {
+        backgroundImage: 'linear-gradient(227deg,#6a0136 30%,#8e0f4f 60%,transparent 60%,rgba(0, 0, 0, 0.2) 60%,transparent 60.5%)',
+        backgroundColor: '#86104b',
+      },
+      before: {
+        backgroundImage: 'linear-gradient(340deg, #6a0136 30%, #921c58 50%, transparent 50%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%)',
+      }
     }
   }
 
