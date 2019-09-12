@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Why extends React.Component {
+class Who extends React.Component {
   render() {
     return (
       <>
@@ -44,4 +44,4 @@ class Why extends React.Component {
   }
 }
 
-export default Why
+export default Who

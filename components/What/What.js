@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-class About extends React.Component {
+class What extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -58,4 +58,4 @@ class About extends React.Component {
   }
 }
 
-export default About
+export default What
