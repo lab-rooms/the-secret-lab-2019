@@ -13,9 +13,18 @@ module.exports = withSass({
       '/': { page: '/' },
       '/en': { page: '/', query: { 'lang': 'en' } },
       '/nl': { page: '/', query: { 'lang': 'nl' } },
-      '/about': { page: '/about' },
-      '/en/about': { page: '/about', query: { 'lang': 'en' } },
-      '/nl/about': { page: '/about', query: { 'lang': 'nl' } },
+
+      '/what': { page: '/what' },
+      '/en/what': { page: '/what', query: { 'lang': 'en' } },
+      '/nl/what': { page: '/what', query: { 'lang': 'nl' } },
+
+      '/who': { page: '/who' },
+      '/en/who': { page: '/who', query: { 'lang': 'en' } },
+      '/nl/who': { page: '/who', query: { 'lang': 'nl' } },
+
+      '/contact': { page: '/contact' },
+      '/en/contact': { page: '/contact', query: { 'lang': 'en' } },
+      '/nl/contact': { page: '/contact', query: { 'lang': 'nl' } },
     };
 
     return routes;
