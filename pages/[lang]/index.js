@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Home from '../../components/Home';
-import '../base.scss';
+import '../../base-styles/base.scss';
+import { DEFAULT_LANGUAGE } from '../../constants';
 
 @connect(
   () => ({}),
@@ -9,7 +10,7 @@ import '../base.scss';
 )
 class HomePage extends React.Component {
   static async getInitialProps({ query }) {
-    const language = query.lang || 'en';
+    const language = query.lang || DEFAULT_LANGUAGE;
     return {
       language,
       page: 'home',

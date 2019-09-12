@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import About from '../components/About';
-import './base.scss';
+import What from '../../components/What';
+import '../../base-styles/base.scss';
+import { DEFAULT_LANGUAGE } from '../../constants';
 
 @connect(
   () => ({}),
@@ -9,7 +10,7 @@ import './base.scss';
 )
 class AboutPage extends React.Component {
   static async getInitialProps({ query }) {
-    const language = query.lang || 'en';
+    const language = query.lang || DEFAULT_LANGUAGE;
     return {
       language,
       page: 'about',
@@ -24,7 +25,7 @@ class AboutPage extends React.Component {
   }
 
   render() {
-    return <About {...this.props} />;
+    return <What {...this.props} />;
   }
 }
 

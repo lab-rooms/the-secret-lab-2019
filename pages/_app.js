@@ -1,12 +1,13 @@
 import React from 'react';
-import App, { Container } from 'next/app'
+import App from 'next/app'
 import { PageTransition } from 'next-page-transitions';
-import { TweenMax, Back, Elastic } from 'gsap';
+import { TweenMax, Back } from 'gsap';
 import withRedux from 'next-redux-wrapper';
 import { Provider } from 'react-redux';
-import './base.scss';
+import '../base-styles/base.scss';
 import Store from '../redux/store';
 import Particles from '../utils/particles';
+import Menu from '../components/Menu';
 
 @withRedux((initialState) => Store.getOrCreateStore(initialState), {
   debug: false,
@@ -37,8 +38,11 @@ class MyApp extends App {
 
   animateBackground() {
     const { pageProps } = this.props;
-    TweenMax.fromTo('.main--ingradient', 1, this.before, {...pageProps.before, ease: Back.easeInOut.config(1)});
-    TweenMax.fromTo('.main', 1.4, this.from, {...pageProps.to, ease: Back.easeInOut.config(1)});
+    TweenMax.fromTo('.main--ingradient',
+      1,
+      this.before,
+      { ...pageProps.before, ease: Back.easeInOut.config(1) });
+    TweenMax.fromTo('.main', 1.4, this.from, { ...pageProps.to, ease: Back.easeInOut.config(1) });
 
     this.from = pageProps.to;
     this.before = pageProps.before;
@@ -48,19 +52,17 @@ class MyApp extends App {
     const {
       Component, pageProps, store, router,
     } = this.props;
-    console.log({pageProps});
     return (
-      <Container>
-        <Provider store={store}>
-          <div ref={() => this.animateBackground()} className={`${pageProps.page} main main--intro`}>
-            <div className="main--ingradient"/>
-            <canvas ref={canvas => this.initializeParticleEngine(canvas)} />
-            <PageTransition timeout={1000} classNames={'page-transition'}>
-              <Component {...pageProps} key={router.route} />
-            </PageTransition>
-          </div>
-        </Provider>
-      </Container>
+      <Provider store={store}>
+        <Menu />
+        <div ref={() => this.animateBackground()} className={`${pageProps.page} main main--intro`}>
+          <div className="main--ingradient"/>
+          <canvas ref={canvas => this.initializeParticleEngine(canvas)}/>
+          <PageTransition timeout={1000} classNames={'page-transition'}>
+            <Component {...pageProps} key={router.route}/>
+          </PageTransition>
+        </div>
+      </Provider>
     )
   }
 }
