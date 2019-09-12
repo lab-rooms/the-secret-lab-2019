@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "muli";
+  src: url("/static/fonts/muli-black-webfont.woff2") format("woff2"), url("/static/fonts/muli-black-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "muli";
+  src: url("/static/fonts/muli-regular-webfont.woff2") format("woff2"),
+  url("/static/fonts/muli-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bwdarius";
+  src: url("/static/fonts/bwdarius-bold-webfont.woff2") format("woff2"),
+  url("/static/fonts/bwdarius-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+$font-primary: 'muli', sans-serif;
+$font-secondary: 'bwdarius', cursive;
