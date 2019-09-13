@@ -1,17 +1,20 @@
 import React from 'react';
 import './menu.scss';
 
-const Navigation = ({menuPosition}) => {
+const Navigation = () => {
   return (
-    <div className={'main-navigation'}>
-      <nav>
-        <ul>
-          <li>home</li>
-          <li>what</li>
-          <li>who</li>
-          <li>contact</li>
-        </ul>
-      </nav>
+    <div className={'menu__navigation'}>
+      <div className={'menu__navigation-content'}>
+        <nav>
+          <ul className={'list'}>
+            <li className={'active'}>home</li>
+            <li>what</li>
+            <li>who</li>
+            <li>contact</li>
+          </ul>
+        </nav>
+      </div>
+      <div className={'menu__navigation-fold'}/>
     </div>
   )
 };
