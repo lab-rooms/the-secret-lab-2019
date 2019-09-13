@@ -8,24 +8,13 @@
   box-shadow: $gutter*4 (-$gutter*2) 0px 0px #3885cc, -$gutter*2 (-$gutter*4) 0px 0px #224579;
   
   &:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 $gutter*1.5 (-$gutter/2) inset rgba(0, 0, 0, 0.5);
-}
-}
-
-.floating-asset:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 $gutter*1.5 (-$gutter/2) inset rgba(0, 0, 0, 0.5);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 $gutter*1.5 (-$gutter/2) inset rgba(0, 0, 0, 0.5);
+  }
 }
