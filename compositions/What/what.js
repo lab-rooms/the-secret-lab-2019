@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Card from '../../components/Card';
 import './what.scss';
-import FloatingAsset from '../../components/FloatingAsset'
+import FloatingAsset from '../../components/FloatingAsset';
 
 class What extends React.Component {
   constructor(props) {
