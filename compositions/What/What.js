@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Card from '../../components/Card';
+import './what.scss';
 
 class What extends React.Component {
   constructor(props) {
@@ -21,7 +23,7 @@ class What extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="what">
         <div className={`${this.state.animationTitle} main__header`}>
           <div style={{ 'max-width': '720px', 'text-align': 'center', position: 'relative' }}>
             <h1 title="What." className={'shadow shadow--float'}>
@@ -32,7 +34,7 @@ class What extends React.Component {
         <div className={`${this.state.animationContent} main__content`}>
           <div className="main__body">
             <div className="main__content-mask-floating-asset"/>
-            <div className="main__content-mask">
+            <Card className="main__content-mask">
               <p className="pre-header">small and crafty</p>
               <h2>The Secret Lab is an award winning creative agency specialising in design.</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates molestias quia
@@ -50,10 +52,10 @@ class What extends React.Component {
                 dolorum architecto, ex
                 ut
                 molestiae maiores, fuga libero! Dolorum repellendus in sunt?</p>
-            </div>
+            </Card>
           </div>
         </div>
-      </>
+      </div>
     )
   }
 }
