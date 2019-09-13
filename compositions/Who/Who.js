@@ -1,9 +1,10 @@
 import React from 'react';
+import './who.scss';
 
 class Who extends React.Component {
   render() {
     return (
-      <>
+      <div className="who">
         <div className="main__header">
           <div style={{ 'max-width': '720px', 'text-align': 'center', position: 'relative' }}>
             <h1 title="Why." className="shadow shadow--float">
@@ -39,7 +40,7 @@ class Who extends React.Component {
             <label htmlFor="main-2">Toggle</label>
           </div>
         </div>
-      </>
+      </div>
     )
   }
 }

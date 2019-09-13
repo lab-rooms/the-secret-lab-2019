@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
+import './contact.scss';
 
-class What extends React.Component {
+class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,7 +22,7 @@ class What extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="contact">
         <div className={`${this.state.animationTitle} main__header`}>
           <div style={{ 'max-width': '720px', 'text-align': 'center', position: 'relative' }}>
             <h1 title="What." className={'shadow shadow--float'}>
@@ -53,9 +54,9 @@ class What extends React.Component {
             </div>
           </div>
         </div>
-      </>
+      </div>
     )
   }
 }
 
-export default What
+export default Contact

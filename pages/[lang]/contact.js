@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Contact from '../../components/Contact';
-import '../../base-styles/base.scss';
+import Contact from '../../compositions/Contact';
 import { DEFAULT_LANGUAGE } from '../../constants';
 
 @connect(
@@ -13,7 +12,6 @@ class ContactPage extends React.Component {
     const language = query.lang || DEFAULT_LANGUAGE;
     return {
       language,
-      page: 'why',
     }
   }
 
