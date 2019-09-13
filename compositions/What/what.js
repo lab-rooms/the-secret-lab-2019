@@ -35,7 +35,7 @@ class What extends React.Component {
         <div className={`${this.state.animationContent} main__content`}>
           <div className="main__body">
             <FloatingAsset 
-            backgroundImage={`${this.state.backgroundImage}`}
+            image={'/static/images/contact.jpg'}
             />
             <div className="main__content-mask-floating-asset"/>
             <Card className="main__content-mask">
