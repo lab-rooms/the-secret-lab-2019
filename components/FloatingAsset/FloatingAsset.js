@@ -12,7 +12,7 @@ class FloatingAsset extends React.Component {
       <>
       <div className="content-box--6x">
         <div className="floating-asset"
-             style={{ backgroundImage: `url(${this.props.backgroundImage})` }}
+             style={{ backgroundImage: `url(${this.props.backgroundImage || './static/images/02.png'})`}}
         />
       </div>
       </>
