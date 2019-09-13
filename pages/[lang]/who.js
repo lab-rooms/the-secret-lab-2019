@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Who from '../../components/Who';
-import '../../base-styles/base.scss';
+import Who from '../../compositions/Who';
 import { DEFAULT_LANGUAGE } from '../../constants';
 
 @connect(
@@ -13,7 +12,6 @@ class WhoPage extends React.Component {
     const language = query.lang || DEFAULT_LANGUAGE;
     return {
       language,
-      page: 'who',
     }
   }
 

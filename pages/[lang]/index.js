@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Home from '../../components/Home';
-import '../../base-styles/base.scss';
+import Home from '../../compositions/Home';
 import { DEFAULT_LANGUAGE } from '../../constants';
 
 @connect(
@@ -13,7 +12,6 @@ class HomePage extends React.Component {
     const language = query.lang || DEFAULT_LANGUAGE;
     return {
       language,
-      page: 'home',
       to: {
         backgroundImage: 'linear-gradient(227deg,#6a0136 30%,#8e0f4f 60%,transparent 60%,rgba(0, 0, 0, 0.2) 60%,transparent 60.5%)',
         backgroundColor: '#86104b',
