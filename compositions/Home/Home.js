@@ -1,10 +1,11 @@
+import './home.scss';
 import React from 'react';
 import Link from 'next/link';
 
 class Home extends React.Component {
   render() {
     return (
-      <>
+      <div className="home">
         <div className="main__header">
           <div className="logo">
             <div><img src="/static/images/logo-def.png" alt="" /></div>
@@ -13,7 +14,7 @@ class Home extends React.Component {
             <div className="main__intro">
               <img src="/static/images/logo-def-black-white.png" width="300" alt="" />
             </div>
-            <Link href="/about"><a className={'button'}>Take me there</a></Link>
+            <Link href="/what"><a className={'button'}>Take me there</a></Link>
           </div>
         </div>
 
@@ -42,7 +43,7 @@ class Home extends React.Component {
         {/*    </div>*/}
         {/*  </div>*/}
         {/*</div>*/}
-      </>
+      </div>
     )
   }
 }
