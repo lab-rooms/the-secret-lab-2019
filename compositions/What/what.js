@@ -10,7 +10,6 @@ class What extends React.Component {
     this.state = {
       animationTitle: '',
       animationContent: '',
-      backgroundImage:'./static/images/contact.jpg',
     };
   }
 
