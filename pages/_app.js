@@ -1,13 +1,15 @@
 import React from 'react';
-import App from 'next/app'
+import App from 'next/app';
 import { PageTransition } from 'next-page-transitions';
 import { TweenMax, Back } from 'gsap';
 import withRedux from 'next-redux-wrapper';
 import { Provider } from 'react-redux';
-import '../base-styles/base.scss';
 import Store from '../redux/store';
 import Particles from '../utils/particles';
 import Menu from '../components/Menu';
+
+import '../base-styles/style.scss';
+import '../base-styles/base.scss';
 
 @withRedux((initialState) => Store.getOrCreateStore(initialState), {
   debug: false,
@@ -38,7 +40,7 @@ class MyApp extends App {
 
   animateBackground() {
     const { pageProps } = this.props;
-    TweenMax.fromTo('.main--ingradient',
+    TweenMax.fromTo('.main--gradient',
       1,
       this.before,
       { ...pageProps.before, ease: Back.easeInOut.config(1) });
@@ -55,11 +57,11 @@ class MyApp extends App {
     return (
       <Provider store={store}>
         <Menu />
-        <div ref={() => this.animateBackground()} className={`${pageProps.page} main main--intro`}>
-          <div className="main--ingradient"/>
-          <canvas ref={canvas => this.initializeParticleEngine(canvas)}/>
+        <div ref={() => this.animateBackground()} className={'main main--intro'}>
+          <div className="main--gradient" />
+          <canvas ref={canvas => this.initializeParticleEngine(canvas)} />
           <PageTransition timeout={1000} classNames={'page-transition'}>
-            <Component {...pageProps} key={router.route}/>
+            <Component {...pageProps} key={router.route} />
           </PageTransition>
         </div>
       </Provider>
