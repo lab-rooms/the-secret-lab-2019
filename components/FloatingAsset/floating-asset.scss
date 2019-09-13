@@ -1,13 +1,14 @@
+.content-box--6x {
+  padding: 60px;
+}
+
 .floating-asset {
   background-size: cover;
   background-image: url(/static/images/02.png);
-  position: absolute;
-  right: 50%;
-  transform: translateX(70%);
-  bottom: 120px;
-  width: 670px;
-  height: 580px;
-  box-shadow: 120px -50px 0px 0px #3885cc, -60px -100px 0px 0px #224579;
+  margin: auto;
+  max-width: 670px;
+  height: 460px;
+  box-shadow: 40px -20px 0px 0px #3885cc, -20px -40px 0px 0px #224579;
 }
 
 .floating-asset:after {

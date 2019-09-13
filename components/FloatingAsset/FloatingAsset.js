@@ -9,7 +9,11 @@ class FloatingAsset extends React.Component {
 
   render() {
     return (
+      <>
+      <div className="content-box--6x">
         <div className="floating-asset"/>
+      </div>
+      </>
     )
   }
 }
