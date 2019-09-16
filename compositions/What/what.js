@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Card from '../../components/Card';
 import './what.scss';
+import FloatingAsset from '../../components/FloatingAsset';
 
 class What extends React.Component {
   constructor(props) {
@@ -33,6 +34,9 @@ class What extends React.Component {
         </div>
         <div className={`${this.state.animationContent} main__content`}>
           <div className="main__body">
+            <FloatingAsset 
+            image={'/static/images/contact.jpg'}
+            />
             <div className="main__content-mask-floating-asset"/>
             <Card className="main__content-mask">
               <p className="pre-header">small and crafty</p>
