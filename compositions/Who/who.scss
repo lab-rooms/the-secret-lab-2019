@@ -1,5 +1,16 @@
-@import '../../base-styles/settings/all';
+@import "../../base-styles/settings/all";
 
-.who {
+.who--background {
+  background: adjust-color($color-oxford, $red: 28, $green: 15, $blue: 21) linear-gradient(382deg, $color-oxford 30%, adjust-color($color-oxford, $red: 36, $green: 14, $blue: 25) 60%, transparent 60%, rgba(0, 0, 0, 0.2) 60%, transparent 60.5%);
+}
 
+.who--background .main--gradient {
+  background: linear-gradient(
+    348deg,
+    $color-oxford 30%,
+    adjust-color($color-oxford, $red: 40, $green: 27, $blue: 34) 50%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    transparent 50.5%
+  );
 }

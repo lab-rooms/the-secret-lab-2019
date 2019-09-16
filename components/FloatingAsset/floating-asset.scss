@@ -1,6 +1,7 @@
 @import "../../base-styles/settings/all";
 
 .floating-asset {
+  position: relative;
   background-size: cover;
   margin: auto;
   max-width: 670px;

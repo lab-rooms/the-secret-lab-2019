@@ -13,7 +13,12 @@ const Menu = () => {
   return (
     <div className={`menu ${menuState}`}>
       <div className={'menu__burger'} onClick={toggleMenu}>
-        <div>
+        <div className={'menu__cogs'}>
+          <img className={'menu__cog'} src="/static/images/cogs/cog03.svg" />
+          <img className={'menu__cog'} src="/static/images/cogs/cog01.svg" />
+          <img className={'menu__cog'} src="/static/images/cogs/cog03.svg" />
+        </div>
+        <div className={'menu__burger-icon'}>
           <div>
             <span></span>
             <span></span>
