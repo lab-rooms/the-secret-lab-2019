@@ -104,6 +104,24 @@ h6 {
   line-height: 1.1;
 }
 
+.pre-header {
+  position: relative;
+  padding-bottom: $gutter/2;
+  margin-bottom: $gutter*1.5;
+  display: inline-block;
+}
+
+.pre-header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 86px;
+  height: 4px;
+  background-color: currentColor;
+}
+
 @media screen and (min-width: $view-tablet-landscape) {
   h1 {
     font-size: 2em;
