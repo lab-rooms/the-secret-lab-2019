@@ -8,9 +8,9 @@ import Store from '../redux/store';
 import Particles from '../utils/particles';
 import Main from '../components/Main';
 import Menu from '../components/Menu';
+import Logo from '../components/Logo';
 
 import '../base-styles/style.scss';
-import '../base-styles/base.scss';
 
 @withRedux((initialState) => Store.getOrCreateStore(initialState), {
   debug: false,
@@ -59,12 +59,10 @@ class MyApp extends App {
     return (
       <Provider store={store}>
         <Main ref={() => this.animateBackground()} className={`main main--intro ${pageProps.page}--background`}>
-          <div className="logo">
-            <div><img src="/static/images/logo-def.png" alt="" /></div>
-          </div>
           <canvas ref={canvas => this.initializeParticleEngine(canvas)} />
         </Main>
         <Menu />
+        <Logo />
         <PageTransition timeout={1000} classNames={'main__page page-transition'}>
           <Component {...pageProps} key={router.route} />
         </PageTransition>
