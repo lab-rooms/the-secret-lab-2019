@@ -14,3 +14,7 @@
     transparent 50.5%
   );
 }
+
+.who .floating-asset {
+  box-shadow: $gutter*2 (-$gutter*2) 0px 0px lighten($color-oxford, 15%), -$gutter*2 (-$gutter*4) 0px 0px lighten($color-oxford, 5%);
+}
