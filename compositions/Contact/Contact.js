@@ -1,60 +1,25 @@
 import React from 'react';
-import Link from 'next/link';
+import Card from '../../components/Card';
 import './contact.scss';
 
 class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      animationTitle: '',
-      animationContent: '',
-    };
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({ animationTitle: 'make-small' })
-    }, 1000);
-    setTimeout(() => {
-      this.setState({ animationContent: 'reveal' })
-    }, 2000);
-  }
-
   render() {
     return (
-      <div className="contact">
-        <div className={`${this.state.animationTitle} main__header`}>
-          <div style={{ 'max-width': '720px', 'text-align': 'center', position: 'relative' }}>
-            <h1 title="What." className={'shadow shadow--float'}>
-              <span>What.</span>
-            </h1>
-          </div>
+      <section className="contact">
+
+        <div className={'main__header'}>
+          <Card>
+            <p className="pre-header">meet and greet</p>
+            <h2>Come in for a visit and we will give you the grand tour</h2>
+            <p>
+              <strong>The Secret Lab BV</strong><br />
+              Nieuwe Keizersgracht 52a<br />
+              1018 DT Amsterdam<br />
+              <a href="mailto:info@thesecretlab.nl">info@thesecretlab.nl</a>
+            </p>
+          </Card>
         </div>
-        <div className={`${this.state.animationContent} main__content`}>
-          <div className="main__body">
-            <div className="main__content-mask-floating-asset"/>
-            <div className="main__content-mask">
-              <p className="pre-header">small and crafty</p>
-              <h2>The Secret Lab is an award winning creative agency specialising in design.</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates molestias quia
-                placeat facilis laborum
-                ipsum accusamus in fuga numquam, dignissimos quaerat pariatur fugiat nostrum vero
-                magni molestiae corporis
-                repellendus labore.</p>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatem error
-                eveniet aspernatur
-                necessitatibus illo tempora incidunt vitae facilis dolor? Hic natus distinctio
-                ducimus nostrum quisquam ex,
-                officia vitae exercitationem. Lorem ipsum dolor sit, amet consectetur adipisicing
-                elit. Exercitationem odit
-                obcaecati officiis temporibus itaque delectus necessitatibus consequuntur laboriosam
-                dolorum architecto, ex
-                ut
-                molestiae maiores, fuga libero! Dolorum repellendus in sunt?</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     )
   }
 }
