@@ -6,6 +6,30 @@
 
 .menu a {
   color: $color-text;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem;
+  display: inline-block;
+  position: relative;
+  transform-origin: left bottom;
+  transition: transform $time-fast ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    transform: skew(-15deg);
+  }
+}
+
+.menu a.active:after {
+  content: "";
+  position: absolute;
+  top: $gutter;
+  left: -$gutter/4;
+  width: 93%;
+  height: 50%;
+  background-color: $color-gold;
+  z-index: -1;
 }
 
 .menu__burger {
@@ -32,8 +56,7 @@
   right: -$gutter * 1.5;
   width: $gutter * 1.5;
   height: $gutter * 1.5;
-
-  animation: spinning-cog-close 2.3s ease;
+  animation: spinning-cog-close 0.6s ease;
 
   &:nth-of-type(2) {
     top: $gutter/2;
@@ -52,10 +75,12 @@
 .menu__burger-icon {
   width: 20px;
   height: 14px;
+  top: $gutter/2;
+  right: $gutter/2;
   position: relative;
 
   &:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 50%;
@@ -268,6 +293,10 @@
 }
 
 @media screen and (min-width: $view-tablet-landscape) {
+  .menu a {
+    font-size: 2.5rem;
+  }
+
   .menu__navigation-content {
     right: 220px;
     transform: scale(0.99) rotateY(90deg) skewY(-10deg);
@@ -288,5 +317,9 @@
     box-shadow: 0 0 0 0 inset rgba(0, 0, 0, 0);
     background-color: white;
     transition: transform $time $time ease-out, box-shadow $time $time ease-out, background-color $time $time ease-out;
+  }
+
+  .menu__cog {
+    animation: spinning-cog-close 1.3s ease;
   }
 }
