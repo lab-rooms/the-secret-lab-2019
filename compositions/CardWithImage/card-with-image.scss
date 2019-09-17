@@ -1,0 +1,11 @@
+@import "../../base-styles/settings/all";
+
+.card-with-image {
+  margin: $gutter*2 0;
+}
+
+@media screen and (min-width: $view-tablet-landscape) {
+  .card-with-image--card-right {
+    flex-direction: row-reverse;
+  }
+}
