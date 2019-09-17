@@ -1,0 +1,44 @@
+@import "../../base-styles/settings/all";
+
+.chevron {
+  position: absolute;
+  bottom: $gutter*4;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 3px;
+  animation: chevron-bounce 2s infinite ease;
+
+  &:before,
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+  }
+
+  &:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+
+  &:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+}
+
+@keyframes chevron-bounce {
+  0%, 100% {
+    transform: rotateY(0deg) translateY(0px);
+    height: 2px;
+  }
+
+  10% {
+    height: 15px;
+    transform: rotateY(0deg) translateY(20px);
+  }
+}

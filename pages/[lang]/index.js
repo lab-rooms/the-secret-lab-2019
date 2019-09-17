@@ -18,7 +18,8 @@ class HomePage extends React.Component {
       },
       before: {
         backgroundImage: 'linear-gradient(340deg, #6a0136 30%, #921c58 50%, transparent 50%, rgba(0, 0, 0, 0.2) 50%, transparent 50.5%)',
-      }
+      },
+      page: 'home',
     }
   }
 

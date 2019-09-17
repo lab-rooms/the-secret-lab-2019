@@ -1,11 +1,10 @@
 @import "../../base-styles/settings/all";
 
-.home ~ .main--intro {
-  opacity: 1 !important;
+.home--background {
   background: adjust-color($color-tyrian, $red: 28, $green: 15, $blue: 21) linear-gradient(227deg, $color-tyrian 30%, adjust-color($color-tyrian, $red: 36, $green: 14, $blue: 25) 60%, transparent 60%, rgba(0, 0, 0, 0.2) 60%, transparent 60.5%);
 }
 
-.home ~ .main--intro .main--gradient {
+.home--background .main--gradient {
   background: linear-gradient(
     340deg,
     $color-tyrian 30%,
