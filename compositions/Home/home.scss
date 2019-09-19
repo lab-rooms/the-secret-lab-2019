@@ -1,7 +1,15 @@
 @import "../../base-styles/settings/all";
 
 .home--background {
-  background: adjust-color($color-tyrian, $red: 28, $green: 15, $blue: 21) linear-gradient(227deg, $color-tyrian 30%, adjust-color($color-tyrian, $red: 36, $green: 14, $blue: 25) 60%, transparent 60%, rgba(0, 0, 0, 0.2) 60%, transparent 60.5%);
+  background: adjust-color($color-tyrian, $red: 28, $green: 15, $blue: 21)
+    linear-gradient(
+      227deg,
+      $color-tyrian 30%,
+      adjust-color($color-tyrian, $red: 36, $green: 14, $blue: 25) 60%,
+      transparent 60%,
+      rgba(0, 0, 0, 0.2) 60%,
+      transparent 60.5%
+    );
 }
 
 .home--background .main--gradient {
@@ -13,4 +21,62 @@
     rgba(0, 0, 0, 0.2) 50%,
     transparent 50.5%
   );
+}
+
+.home .main__header img {
+  position: relative;
+}
+
+.home .main__header .home-logo {
+  position: absolute;
+  width: 140px;
+  animation: floating 8s ease-in-out infinite;
+  margin-top: -70px;
+  margin-left: -10px;
+}
+
+.home .home-island {
+  animation: floating 8s ease-in-out infinite reverse;
+}
+
+.home .main__header:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  filter: blur(5px);
+  background-color: rgba(10, 10, 10, 0.4);
+  border-radius: 100%;
+  width: 200px;
+  height: 30px;
+  transform: translateX(-50%);
+  margin-top: 45px;
+  margin-left: -10px;
+  animation: home-logo-shadow 8s infinite ease;
+}
+
+@media screen and (min-width: $view-tablet-landscape) {
+  .home .main__header:after {
+    margin-top: 55px;
+  }
+
+  .home .main__header .home-logo {
+    width: 200px;
+    margin-top: -90px;
+  }
+}
+
+@keyframes home-logo-shadow {
+  0%,
+  100% {
+    filter: blur(8px);
+    opacity: 0.8;
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  65% {
+    filter: blur(5px);
+    opacity: 1;
+    transform: translateX(-50%) scale(0.9);
+  }
 }
