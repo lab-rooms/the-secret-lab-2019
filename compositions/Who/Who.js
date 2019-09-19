@@ -8,10 +8,19 @@ class Who extends React.Component {
     return (
       <section className="who">
         <div className={'main__header'}>
-          <img src="/static/images/who.png" />
-          {/* <h1 title="Who." className={'shadow shadow--float'}>
+         <div className={'orbit'}>
+            <div className={'ball'} />
+            <div className={'ball'} />
+            <img src="/static/images/ring.png" />
+         </div>
+          <div className={'orbit orbit--second'}>
+            <div className={'ball'} />
+            <div className={'ball'} />
+            <img src="/static/images/ring.png" />
+         </div>
+          <h1 title="Who." className={'shadow shadow--float'}>
               <span>Who.</span>
-            </h1> */}
+            </h1>
           <Chevron />
         </div>
         <div className={'section__inner'}>
