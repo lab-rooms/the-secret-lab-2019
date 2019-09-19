@@ -8,12 +8,13 @@
   align-items: flex-end;
   justify-content: flex-start;
   position: relative;
+  padding: 0;
 
   &:before {
     content: "";
     background-image: url("/static/images/contact-building.png");
     background-size: 270%;
-    background-position: -380px -50px;
+    background-position: 60% 70%;
     position: absolute;
     top: $gutter;
     right: $gutter;
