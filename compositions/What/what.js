@@ -9,6 +9,7 @@ class What extends React.Component {
       <section className="what">
         <div className={'section__inner'}>
           <div className={'main__header'}>
+            <img className={'portal'} src="/static/images/portal.gif" />
             <h1 title="What." className={'shadow shadow--float'}>
               <span>What.</span>
             </h1>

@@ -1,7 +1,15 @@
 @import "../../base-styles/settings/all";
 
 .what--background {
-  background: adjust-color($color-midnight, $red: 28, $green: 15, $blue: 21) linear-gradient(317deg, $color-midnight 30%, adjust-color($color-midnight, $red: 36, $green: 14, $blue: 25) 60%, transparent 60%, rgba(0, 0, 0, 0.2) 60%, transparent 60.5%);
+  background: adjust-color($color-midnight, $red: 28, $green: 15, $blue: 21)
+    linear-gradient(
+      317deg,
+      $color-midnight 30%,
+      adjust-color($color-midnight, $red: 36, $green: 14, $blue: 25) 60%,
+      transparent 60%,
+      rgba(0, 0, 0, 0.2) 60%,
+      transparent 60.5%
+    );
 }
 
 .what--background .main--gradient {
@@ -16,5 +24,43 @@
 }
 
 .what .floating-asset {
-  box-shadow: $gutter*2 (-$gutter*2) 0px 0px lighten($color-midnight, 15%), -$gutter*2 (-$gutter*4) 0px 0px lighten($color-midnight, 5%);
+  box-shadow: $gutter * 2 (-$gutter * 2) 0px 0px lighten($color-midnight, 15%),
+    -$gutter * 2 (-$gutter * 4) 0px 0px lighten($color-midnight, 5%);
+}
+
+.what .main__header .portal {
+  position: absolute;
+  transform: rotateX(72deg) scaleX(1.4);
+  margin-top: 60px;
+}
+
+.what .main__header h1.shadow--float:before {
+  bottom: -$gutter;
+  animation: what-floating-shadow 8s ease-in-out infinite;
+}
+
+@media screen and (min-width: $view-tablet-landscape) {
+  .what .main__header h1.shadow--float:before {
+    bottom: $gutter*2;
+    animation: what-floating-shadow 8s ease-in-out infinite;
+  }
+
+  .what .main__header .portal {
+    transform: rotateX(69deg) scaleX(2.9);
+    margin-top: 80px;
+  }
+}
+
+@keyframes what-floating-shadow {
+  0%,
+  100% {
+    transform: skew(79deg, 22deg) rotate(-22deg) scale(0.71, -0.15);
+    color: rgba(0, 0, 0, 0.45);
+    filter: blur(28px);
+  }
+  65% {
+    transform: skew(79deg, 22deg) rotate(-22deg) scale(0.71, -0.15);
+    color: rgba(0, 0, 0, 0.65);
+    filter: blur(24px);
+  }
 }
