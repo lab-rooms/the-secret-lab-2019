@@ -1,7 +1,8 @@
 @import "../../base-styles/settings/all";
 
 .card-with-image {
-  margin: $gutter*2 0;
+  margin-top: $gutter*2;
+  margin-bottom: $gutter*2;
 }
 
 @media screen and (min-width: $view-tablet-landscape) {
