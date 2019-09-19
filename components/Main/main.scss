@@ -59,6 +59,11 @@
   align-items: center;
   height: 100vh;
   position: relative;
+  padding: 0 $gutter*2;
+}
+
+.main__header img {
+  max-height: 500px;
 }
 
 .main__header h1 {
@@ -68,7 +73,7 @@
 
 .main__header h1 span {
   position: relative;
-  background: -webkit-linear-gradient(#eee, #ddd);
+  background: linear-gradient(#eee, #ddd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: floating 8s ease-in-out infinite;
