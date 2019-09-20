@@ -25,7 +25,7 @@ class What extends React.Component {
               <div className={' content-box--v-2x'}>
                 <Card className={'card--transparent'} align='center'>
                   <p className="pre-header">creative rustlers</p>
-                  <h2>We collaborate with brands and agencies to create memorable experiences.</h2>
+                  <h1>We collaborate with brands and agencies to create memorable experiences.</h1>
                   <p>Think of us as more of a creative partner than a resource. This means we have shared perspective on how we can work together to achieve your goals. Basically, your new BFF.</p>
                 </Card>
               </div>

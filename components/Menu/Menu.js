@@ -12,6 +12,7 @@ const Menu = () => {
 
   return (
     <div className={`menu ${menuState}`}>
+      <div className={'menu__burger-overlay'} onClick={toggleMenu} />
       <div className={'menu__burger'} onClick={toggleMenu}>
         <div className={'menu__cogs'}>
           <img className={'menu__cog'} src="/static/images/cogs/cog03.svg" />

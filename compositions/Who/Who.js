@@ -32,7 +32,7 @@ class Who extends React.Component {
               <div className={' content-box--v-2x'}>
                 <Card className={'card--transparent'} align='center'>
                   <p className="pre-header">pocket dynamos</p>
-                  <h2>We're designers, directors, strategists, and awkward dancers.</h2>
+                  <h1>We're designers, directors, strategists, and awkward dancers.</h1>
                   <p>We have over a decade of experience in the creative industry, producing exciting experiences for brands that are as smart, as they are effective.</p>
                 </Card>
               </div>

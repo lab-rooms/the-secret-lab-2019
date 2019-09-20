@@ -2,13 +2,15 @@
 
 .button {
   position: relative;
-  padding: $gutter/1.5 $gutter * 1.5;
+  padding: $gutter/1.5 $gutter;
+  margin-top: $gutter/2;
+  margin-bottom: $gutter/2;
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
   z-index: 1;
   color: $color-text;
-  transform: translateX(0);
+  transform: translateX(0) scale(1);
   transition: $time-fast ease-in-out;
   
   &:before,
@@ -39,8 +41,7 @@
   &:focus,
   &:active {
     color: $color-gold;
-    padding-left: $gutter * 2;
-    transform: translateX($gutter/2);
+    transform: translateX($gutter/2) scale(1.01);
 
     &:before {
       transform: skewX(33deg);
