@@ -85,219 +85,209 @@
 
 // ========================================================
 
-[class*='grid--'],
+[class*="grid--"],
 .grid {
-	display: flex;
-	margin: 0;
-	flex-wrap: wrap;
+  display: flex;
+  margin: 0;
+  flex-wrap: wrap;
 }
 
-[class*='grid'] > * {
-	margin: 0;
+[class*="grid"] > * {
+  margin: 0;
 }
 
 .grid--fill > * {
-	margin: 0;
-	width: 100%;
+  margin: 0;
+  width: 100%;
 }
 
-[class*='grid--max-'] > * {
-	max-width: 100%;
-	flex-basis: 100%;
+[class*="grid--max-"] > * {
+  max-width: 100%;
+  flex-basis: 100%;
 }
-
 
 // Vertical grid alignment
 .grid--valign-top {
-	align-items: flex-start;
+  align-items: flex-start;
 }
 
 .grid--valign-center {
-	align-items: center;
+  align-items: center;
 }
 
 .grid--valign-bottom {
-	align-items: flex-end;
+  align-items: flex-end;
 }
 
 // Horizontal grid alignment
 .grid--halign-left {
-	justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .grid--halign-center {
-	justify-content: center;
+  justify-content: center;
 }
 
 .grid--halign-right {
-	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 // Column alignment
 .col--align-start {
-	align-self: flex-start;
+  align-self: flex-start;
 }
 
 .col--align-center {
-	align-self: center;
+  align-self: center;
 }
 
 .col--align-bottom {
-	align-self: flex-end;
+  align-self: flex-end;
 }
 
 @for $i from 0 through $multiplyGutter {
-	.grid--stretch-#{$i}x {
-		margin: (-$gutter/2) * $i;
-	}
+  .grid--stretch-#{$i}x {
+    margin: (-$gutter/2) * $i;
+  }
 
-	// stretch-h = horizontal negative margins
-	.grid--stretch-h-#{$i}x {
-		margin-left: (-$gutter/2) * $i;
-		margin-right: (-$gutter/2) * $i;
-	}
+  // stretch-h = horizontal negative margins
+  .grid--stretch-h-#{$i}x {
+    margin-left: (-$gutter/2) * $i;
+    margin-right: (-$gutter/2) * $i;
+  }
 
-	// stretch-v = vertical negative margins
-	.grid--stretch-v-#{$i}x {
-		margin-top: (-$gutter/2) * $i;
-		margin-bottom: (-$gutter/2) * $i;
-	}
+  // stretch-v = vertical negative margins
+  .grid--stretch-v-#{$i}x {
+    margin-top: (-$gutter/2) * $i;
+    margin-bottom: (-$gutter/2) * $i;
+  }
 
-	// stretch-t = top negative margins
-	.grid--stretch-t-#{$i}x {
-		margin-top: (-$gutter/2) * $i;
-	}
+  // stretch-t = top negative margins
+  .grid--stretch-t-#{$i}x {
+    margin-top: (-$gutter/2) * $i;
+  }
 
-	// stretch-r = right negative margins
-	.grid--stretch-r-#{$i}x {
-		margin-right: (-$gutter/2) * $i;
-	}
+  // stretch-r = right negative margins
+  .grid--stretch-r-#{$i}x {
+    margin-right: (-$gutter/2) * $i;
+  }
 
-	// stretch-b = bottom negative margins
-	.grid--stretch-b-#{$i}x {
-		margin-bottom: (-$gutter/2) * $i;
-	}
+  // stretch-b = bottom negative margins
+  .grid--stretch-b-#{$i}x {
+    margin-bottom: (-$gutter/2) * $i;
+  }
 
-	// stretch-l = left negative margins
-	.grid--stretch-l-#{$i}x {
-		margin-left: (-$gutter/2) * $i;
-	}
+  // stretch-l = left negative margins
+  .grid--stretch-l-#{$i}x {
+    margin-left: (-$gutter/2) * $i;
+  }
 }
 
 @for $col from 2 through $maxCols {
-	@for $part from 1 through $maxCols {
-		.col-#{$part}\/#{$col} {
-			max-width: 100%;
-			flex-basis: 100%;
-		}
-	}
+  @for $part from 1 through $maxCols {
+    .col-#{$part}\/#{$col} {
+      max-width: percentage($part / $col);
+      flex-basis: percentage($part / $col);
+    }
+  }
 }
 
 // ========================================================
 // TABLET PORTRAIT
 // ========================================================
 @media screen and (min-width: $view-tablet-portrait) {
-	.grid--max-3 > * {
-		max-width: 33.333%;
-		flex-basis: 33.333%;
-	}
+  .grid--max-3 > * {
+    max-width: 33.333%;
+    flex-basis: 33.333%;
+  }
 
-	.grid--max-4 > * {
-		max-width: 50%;
-		flex-basis: 50%;
-	}
+  .grid--max-4 > * {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
 
-	@for $col from 2 through $maxCols {
-		@for $part from 1 through $maxCols {
-			.col-#{$part}\/#{$col}\@tablet-portrait {
-				max-width: percentage($part / $col);
-				flex-basis: percentage($part / $col);
-			}
-		}
-	}
+  @for $col from 2 through $maxCols {
+    @for $part from 1 through $maxCols {
+      .col-#{$part}\/#{$col}\@tablet-portrait {
+        max-width: percentage($part / $col);
+        flex-basis: percentage($part / $col);
+      }
+    }
+  }
 
-	.grid--halign-left\@tablet-portrait {
-		justify-content: flex-start;
-	}
-	
-	.grid--halign-right\@tablet-portrait {
-		justify-content: flex-end;
-	}
+  .grid--halign-left\@tablet-portrait {
+    justify-content: flex-start;
+  }
 
-	.grid--halign-center\@tablet-portrait {
-		justify-content: center;
-	}
+  .grid--halign-right\@tablet-portrait {
+    justify-content: flex-end;
+  }
+
+  .grid--halign-center\@tablet-portrait {
+    justify-content: center;
+  }
 }
 
 // ========================================================
 // TABLET LANDSCAPE
 // ========================================================
 @media screen and (min-width: $view-tablet-landscape) {
-	.grid--max-2 > * {
-		max-width: 50%;
-		flex-basis: 50%;
-	}
+  .grid--max-2 > * {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
 
-	@for $col from 2 through $maxCols {
-		.grid--max-#{$col} > * {
-			max-width: percentage(1 / $col);
-			flex-basis: percentage(1 / $col);
-		}
-	}
+  @for $col from 2 through $maxCols {
+    .grid--max-#{$col} > * {
+      max-width: percentage(1 / $col);
+      flex-basis: percentage(1 / $col);
+    }
+  }
 
-	@for $col from 2 through $maxCols {
-		@for $part from 1 through $maxCols {
-			.col-#{$part}\/#{$col} {
-				max-width: percentage($part / $col);
-				flex-basis: percentage($part / $col);
-			}
-		}
-	}
+  @for $col from 2 through $maxCols {
+    @for $part from 1 through $maxCols {
+      .col-#{$part}\/#{$col}\@tablet-landscape {
+        max-width: percentage($part / $col);
+        flex-basis: percentage($part / $col);
+      }
+    }
+  }
 
-	@for $col from 2 through $maxCols {
-		@for $part from 1 through $maxCols {
-			.col-#{$part}\/#{$col}\@tablet-landscape {
-				max-width: percentage($part / $col);
-				flex-basis: percentage($part / $col);
-			}
-		}
-	}
+  .grid--halign-left\@tablet-landscape {
+    justify-content: flex-start;
+  }
 
-	.grid--halign-left\@tablet-landscape {
-		justify-content: flex-start;
-	}
-	
-	.grid--halign-right\@tablet-landscape {
-		justify-content: flex-end;
-	}
+  .grid--halign-right\@tablet-landscape {
+    justify-content: flex-end;
+  }
 
-	.grid--halign-center\@tablet-landscape {
-		justify-content: center;
-	}
+  .grid--halign-center\@tablet-landscape {
+    justify-content: center;
+  }
 }
 
 // ========================================================
 // DESKTOP
 // ========================================================
 @media screen and (min-width: $view-desktop) {
-	@for $col from 2 through $maxCols {
-		@for $part from 1 through $maxCols {
-			.col-#{$part}\/#{$col}\@desktop {
-				max-width: percentage($part / $col);
-				flex-basis: percentage($part / $col);
-			}
-		}
-	}
+  @for $col from 2 through $maxCols {
+    @for $part from 1 through $maxCols {
+      .col-#{$part}\/#{$col}\@desktop {
+        max-width: percentage($part / $col);
+        flex-basis: percentage($part / $col);
+      }
+    }
+  }
 
-	.grid--halign-left\@desktop {
-		justify-content: flex-start;
-	}
-	
-	.grid--halign-right\@desktop {
-		justify-content: flex-end;
-	}
+  .grid--halign-left\@desktop {
+    justify-content: flex-start;
+  }
 
-	.grid--halign-center\@desktop {
-		justify-content: center;
-	}
+  .grid--halign-right\@desktop {
+    justify-content: flex-end;
+  }
+
+  .grid--halign-center\@desktop {
+    justify-content: center;
+  }
 }
