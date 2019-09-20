@@ -9,6 +9,8 @@ import Particles from '../utils/particles';
 import Main from '../components/Main';
 import Menu from '../components/Menu';
 import Logo from '../components/Logo';
+import Footer from '../components/Footer';
+import Meta from '../components/Meta';
 
 import '../base-styles/style.scss';
 
@@ -58,6 +60,7 @@ class MyApp extends App {
 
     return (
       <Provider store={store}>
+        <Meta />
         <Main ref={() => this.animateBackground()} className={`main main--intro ${pageProps.page}--background`}>
           <canvas ref={canvas => this.initializeParticleEngine(canvas)} />
         </Main>
@@ -66,6 +69,7 @@ class MyApp extends App {
         <PageTransition timeout={1000} classNames={'main__page page-transition'}>
           <Component {...pageProps} key={router.route} />
         </PageTransition>
+        <Footer />
       </Provider>
     )
   }
