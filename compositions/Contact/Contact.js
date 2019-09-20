@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../../components/Card';
+import Button from '../../components/Button';
 import './contact.scss';
 
 class Contact extends React.Component {
@@ -16,6 +17,7 @@ class Contact extends React.Component {
               1018 DT Amsterdam<br />
               <a href="mailto:info@thesecretlab.nl">info@thesecretlab.nl</a>
             </p>
+            <Button href="https://calendly.com/femkestorm/call-with-femke" target="_blank">Get a 15 min. free consult</Button>
           </Card>
         </div>
       </section>
