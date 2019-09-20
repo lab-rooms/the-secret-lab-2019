@@ -7,3 +7,21 @@
   bottom: 0;
   box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.2);
 }
+
+.card--text-center {
+  text-align: center;
+}
+
+.card--text-center .pre-header:after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card--text-right {
+  text-align: right;
+}
+
+.card--text-right .pre-header:after {
+  left: auto;
+  right: 0;
+}
