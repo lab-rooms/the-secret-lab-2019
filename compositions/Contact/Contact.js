@@ -6,7 +6,6 @@ class Contact extends React.Component {
   render() {
     return (
       <section className="contact">
-
         <div className={'main__header'}>
           <Card>
             <p className="pre-header">meet and greet</p>

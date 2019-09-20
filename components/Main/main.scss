@@ -46,6 +46,16 @@
   box-shadow: 0 0 20px 6px inset rgba(0, 0, 0, 0.2);
 }
 
+.main--light {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  opacity: 0.15;
+  mix-blend-mode: screen;
+  width: 370px;
+}
+
 .main__intro img {
   position: absolute;
   bottom: 120%;
@@ -59,7 +69,8 @@
   align-items: center;
   height: 100vh;
   position: relative;
-  padding: 0 $gutter*2;
+  overflow: hidden;
+  padding: 0 $gutter * 2;
 }
 
 .main__header img {
