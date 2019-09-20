@@ -1,0 +1,53 @@
+@import "../../base-styles/settings/all";
+
+.button {
+  position: relative;
+  padding: $gutter/1.5 $gutter * 1.5;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1;
+  color: $color-text;
+  transform: translateX(0);
+  transition: $time-fast ease-in-out;
+  
+  &:before,
+  &:after {
+    content: "";
+    border: 1px solid $color-gold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    z-index: -1;
+    transform: skewX(0);
+    transition: $time-fast ease-in-out;
+  }
+
+  &:before {
+    border-bottom: none;
+  }
+
+  &:after {
+    top: auto;
+    bottom: 0;
+    border-top: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-gold;
+    padding-left: $gutter * 2;
+    transform: translateX($gutter/2);
+
+    &:before {
+      transform: skewX(33deg);
+    }
+
+    &:after {
+      transform: skewX(-33deg);
+    }
+  }
+}

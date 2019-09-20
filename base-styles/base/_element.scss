@@ -290,7 +290,6 @@ a {
   color: currentColor;
   text-decoration: underline;
   font-family: $font-primary;
-  font-size: 1.25em;
 
   &:focus,
   &:hover,
@@ -300,9 +299,6 @@ a {
   }
 }
 
-p a {
-  font-size: 1em;
-}
 
 // ========================================================
 
