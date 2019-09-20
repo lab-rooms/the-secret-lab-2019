@@ -60,7 +60,7 @@ class MyApp extends App {
 
     return (
       <Provider store={store}>
-        <Meta />
+        <Meta page={pageProps.page} />
         <Main ref={() => this.animateBackground()} className={`main main--intro ${pageProps.page}--background`}>
           <canvas ref={canvas => this.initializeParticleEngine(canvas)} />
         </Main>
