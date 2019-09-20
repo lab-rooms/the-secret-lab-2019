@@ -1,5 +1,5 @@
 import React from 'react';
-import CardWithImage from '../../compositions/CardWithImage';
+import CardWithImage from '../../components/CardWithImage';
 import Chevron from '../../components/Chevron';
 import './what.scss';
 
