@@ -25,46 +25,20 @@ class Who extends React.Component {
           </h1>
           <Chevron />
         </div>
-        <div className={'section__inner'}>
-          <div className={'main__content'}>
-            <div className="main__body">
 
-              <div className={'content-box--v-2x'}>
-                <Card align='center'>
-                  <p className="pre-header">small and crafty</p>
-                  <h2>The Secret Lab is an award winning creative agency specialising in design.</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates molestias quia
-                    placeat facilis laborum
-                    ipsum accusamus in fuga numquam, dignissimos quaerat pariatur fugiat nostrum vero
-                    magni molestiae corporis
-                repellendus labore.</p>
+        <div className={'main__content'}>
+          <div className="main__body">
+            <div className={'section__inner section__inner--narrow'}>
+              <div className={' content-box--v-2x'}>
+                <Card className={'card--transparent'} align='center'>
+                  <p className="pre-header">pocket dynamos</p>
+                  <h2>We're designers, directors, strategists, and awkward dancers.</h2>
+                  <p>We have over a decade of experience in the creative industry, producing exciting experiences for brands that are as smart, as they are effective.</p>
                 </Card>
               </div>
+            </div>
 
-              <div className={'content-box--v-2x'}>
-                <Card align='center'>
-                  <p className="pre-header">small and crafty</p>
-                  <h2>The Secret Lab is an award winning creative agency specialising in design.</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates molestias quia
-                    placeat facilis laborum
-                    ipsum accusamus in fuga numquam, dignissimos quaerat pariatur fugiat nostrum vero
-                    magni molestiae corporis
-                repellendus labore.</p>
-                </Card>
-              </div>
-
-              <div className={'content-box--v-2x'}>
-                <Card align='right'>
-                  <p className="pre-header">small and crafty</p>
-                  <h2>The Secret Lab is an award winning creative agency specialising in design.</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates molestias quia
-                    placeat facilis laborum
-                    ipsum accusamus in fuga numquam, dignissimos quaerat pariatur fugiat nostrum vero
-                    magni molestiae corporis
-                repellendus labore.</p>
-                </Card>
-              </div>
-
+            <div className={'section__inner'}>
               <div className={'content-box--v-2x'}>
                 <CardWithImage image="/static/images/contact.jpg" >
                   <p className="pre-header">small and crafty</p>
@@ -88,6 +62,36 @@ class Who extends React.Component {
                     magni molestiae corporis
                 repellendus labore.</p>
                 </CardWithImage>
+              </div>
+
+              <div className={'grid--stretch-h-2x grid--max-2'}>
+                <div>
+                  <div className={'content-box--2x'}>
+                    <Card align='center'>
+                      <p className="pre-header">small and crafty</p>
+                      <h2>The Secret Lab is an award winning creative agency specialising in design.</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates molestias quia
+                        placeat facilis laborum
+                        ipsum accusamus in fuga numquam, dignissimos quaerat pariatur fugiat nostrum vero
+                        magni molestiae corporis
+                  repellendus labore.</p>
+                    </Card>
+                  </div>
+                </div>
+
+                <div>
+                  <div className={'content-box--2x'}>
+                    <Card align='right'>
+                      <p className="pre-header">small and crafty</p>
+                      <h2>The Secret Lab is an award winning creative agency specialising in design.</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates molestias quia
+                        placeat facilis laborum
+                        ipsum accusamus in fuga numquam, dignissimos quaerat pariatur fugiat nostrum vero
+                        magni molestiae corporis
+                  repellendus labore.</p>
+                    </Card>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

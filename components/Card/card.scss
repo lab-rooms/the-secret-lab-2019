@@ -8,6 +8,12 @@
   box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.2);
 }
 
+.card--transparent {
+  background-color: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+
 .card--text-center {
   text-align: center;
 }
