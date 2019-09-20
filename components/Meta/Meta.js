@@ -44,6 +44,8 @@ class Meta extends React.Component {
           content="The Secret Lab crafts solutions for the new digital world. With equality for people, nature, and creativity. That is our chemistry of joy." />
         <meta name="twitter:title" content="The secret lab" />
         <meta name="twitter:image" content="https://thesecretlab.nl/assets/images/twitter-card.png" />
+
+        <link rel="preload" href="/static/images/contact-building.png" as="image" />
       </Head>
     )
   }
