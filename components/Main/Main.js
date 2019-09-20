@@ -6,6 +6,9 @@ class Main extends React.Component {
     return (
       <div className={this.props.className}>
         <div className="main--gradient" />
+        <div className="main--light">
+          <img src="/static/images/heavenly-light.jpg" />
+        </div>
         {this.props.children}
       </div>
     )
