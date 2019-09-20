@@ -1,5 +1,6 @@
 import React from 'react';
 import CardWithImage from '../../components/CardWithImage';
+import Button from '../../components/Button';
 import Chevron from '../../components/Chevron';
 import './what.scss';
 
@@ -35,6 +36,7 @@ class What extends React.Component {
                   dolorum architecto, ex
                   ut
                 molestiae maiores, fuga libero! Dolorum repellendus in sunt?</p>
+                <Button href="/who">Find out who we are</Button>
               </CardWithImage>
             </div>
           </div>

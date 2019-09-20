@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../components/Button';
 import CardWithImage from '../../components/CardWithImage';
 import Card from '../../components/Card';
 import Chevron from '../../components/Chevron';
@@ -73,6 +74,7 @@ class Who extends React.Component {
                     ipsum accusamus in fuga numquam, dignissimos quaerat pariatur fugiat nostrum vero
                     magni molestiae corporis
                 repellendus labore.</p>
+                  <Button href="/contact">Get in touch</Button>
                 </CardWithImage>
               </div>
 

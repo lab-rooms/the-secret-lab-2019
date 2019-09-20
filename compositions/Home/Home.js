@@ -1,8 +1,7 @@
 import React from 'react';
-import Card from '../../components/Card';
+import CardWithImage from '../../components/CardWithImage';
 import Chevron from '../../components/Chevron';
 import Button from '../../components/Button';
-import Link from 'next/link';
 import './home.scss';
 
 class Home extends React.Component {
@@ -16,8 +15,8 @@ class Home extends React.Component {
         </div>
         <div className={'main__content'}>
           <div className="main__body">
-            <div className={'section__inner section__inner--narrow'}>
-              <Card>
+            <div className={'section__inner'}>
+              <CardWithImage image="https://assets-us-01.kc-usercontent.com:443/3b26baf0-067c-005f-87eb-d71a42470f96/d5f1e365-9b64-4b3b-b14b-23fa39592851/Toy%20Army.jpg?w=1905">
                 <p className="pre-header">fast and agile</p>
                 <h2>The Secret Lab crafts solutions for the new digital world</h2>
                 <p>With equality for people, nature, and creativity. That is our chemistry of joy.</p>
@@ -26,7 +25,7 @@ class Home extends React.Component {
                   <div><div className={'content-box--2x'}>or</div></div>
                   <div><Button href="https://calendly.com/femkestorm/call-with-femke" target="_blank">Request a secret call</Button></div>
                 </div>
-              </Card>
+              </CardWithImage>
             </div>
           </div>
         </div>

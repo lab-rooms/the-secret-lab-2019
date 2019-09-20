@@ -55,6 +55,11 @@
   animation: home-logo-shadow 8s infinite ease;
 }
 
+.home .floating-asset {
+  box-shadow: $gutter * 2 (-$gutter * 2) 0px 0px lighten($color-tyrian, 15%),
+    -$gutter * 2 (-$gutter * 4) 0px 0px lighten($color-tyrian, 5%);
+}
+
 @media screen and (min-width: $view-tablet-landscape) {
   .home .main__header:after {
     margin-top: 55px;
